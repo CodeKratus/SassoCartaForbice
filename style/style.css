@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    
+    margin:0
+
+}
+
+#top{
+    font-family: 'Rubik Puddles', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    background-color:rgb(105, 173, 196);
+    height: 80px;
+}
+
+#container{
+    width:100%;
+    height: 961px;
+    background-color:rgb(54, 51, 51);
+     display: grid;
+     place-items: center;
+     align-items: start;
+     align-content:start;
+     grid-gap: 90px;
+     grid-template-columns: 1fr ;
+    
+}
+
+#utente{
+    background-color: red;
+    display:inline-block;
+    text-align: center;
+    padding-top: 5px;
+   position: absolute;
+    margin-right: 200px;
+    margin-top: 50px;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+p,section{
+    color: white;
+}
+
+#pc{
+    background-color: red;
+    display:inline-block;
+    text-align: center;
+    padding-top: 5px;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 50px;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+   
+}
+
+#punti{
+    margin-top:20px;
+    position: relative;
+    border:4px solid white;
+    height: 100px;
+    width: 200px;
+    border-radius: 5px;
+    display: flex;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+#chiVince{
+font-size: 30px;
+ }
+
+ #immagini{
+
+    width:60%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    
+ }
+
+ img{
+    position: fixed;
+    border-radius: 50%;
+    border: 5px solid rgb(103, 130, 151);
+   
+ }
+
+ #i1{
+    margin-left: -400px;
+ }
+
+ #i3{
+    margin-right: -400px;
+ }
+
+ img:hover{
+   width: 170px;
+   height: 170px;
+   cursor: pointer;
+   border: 5px solid rgb(5, 86, 151);
+ }
+
