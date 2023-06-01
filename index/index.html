@@ -17,20 +17,22 @@
       rel="stylesheet"
     />
     <title>Sasso carta forbice</title>
-    <h1></h1>
+    
   </head>
   <body>
+    <script src="../js/script.js" defer></script>
     <header id="top">Sasso Carta Forbice</header>
     <div id="container">
-      <section id="punti">0:0</section>
+      <section id="punti"><span id="uts">0</span>:<span id="pcs">0</span></section>
       <p id="utente">Utente</p>
       <p id="pc">PC</p>
       <p id="chiVince">Carta vince sul sasso , Utente vince</p>
       <section id="immagini">
-        <img src="../img/sasso.PNG" id ="i1" alt="" onclick="" />
-        <img src="../img/carta.PNG" id ="i2" alt="" onclick="" />
-        <img src="../img/forbice.PNG" id ="i3" alt="" onclick="" />
+        <img src="../img/sasso.PNG" id ="i1" alt="" onclick="sassoClick()" />
+        <img src="../img/carta.PNG" id ="i2" alt="" onclick="cartaClick()" />
+        <img src="../img/forbice.PNG" id ="i3" alt="" onclick="forbiceClick()" />
       </section>
+      <p id="chiVince">Il primo che arriva a tre punti vince il match</p>
     </div>
   </body>
 </html>
