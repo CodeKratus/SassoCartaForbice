@@ -5,10 +5,8 @@ let pcScore = 0;
 const uts = document.getElementById("uts");
 const pcs = document.getElementById("pcs");
 const vincitaTemporanea = document.getElementById("chiVince");
-const sasso = document.getElementById(i1);
-const carta = document.getElementById(i2);
-const forbice = document.getElementById(i3);
-
+const vincitore = document.getElementById("vincitore")
+const tiroPc = document.getElementById("tiroPc");
 
 function randomPc(){
 //    let sceltaPc="";
@@ -30,44 +28,55 @@ function randomPc(){
 }
 
 function gioco(sceltaUtente){
-    if(utenteScore < 3 && pcScore < 3){
+    vincitore.innerHTML ="";
     const resPc = randomPc();
-    console.log("Utente ha scelto " + sceltaUtente)
-    console.log("Pc ha scelto " + resPc)
+    if(resPc == "s"){
+    tiroPc.innerHTML = "Pc ha scelto sasso" }
+    else if(resPc == "c"){
+        tiroPc.innerHTML = "Pc ha scelto carta"
+    }else{
+        tiroPc.innerHTML = "Pc ha scelto forbice"}
     switch(sceltaUtente + resPc){
     case 'sf':
     case 'cs':
     case 'fc':
-        console.log("Utente vince il round!")
-        
+        vincitaTemporanea.innerHTML = "Utente vince il round!"
         utenteScore++;
-        console.log("Utente score : " + utenteScore)
+        uts.innerHTML = utenteScore;
         break;
     case 'fs':
     case 'sc':
     case 'cf':
-        console.log("Pc vince il round!")
+        vincitaTemporanea.innerHTML = "Pc vince il round"
         pcScore++;
-        console.log("Pc score : " + pcScore)
+        pcs.innerHTML = pcScore;
         break;
     case 'cc':
     case 'ff':
     case 'ss':
-        console.log("Pareggio!")
+        vincitaTemporanea.innerHTML = "Pareggio!"
         break;
 
-    }
+    }  
+    if(utenteScore < 3 && pcScore < 3){
+        return null;
     }else 
-    chiamaVincitore();
+      chiamaVincitore();
 }
 
 function chiamaVincitore(){
     if(utenteScore ==3){
-        console.log('Utente vince il gioco');
+       vincitore.innerHTML = "Utente vince il gioco";
         utenteScore = 0;
-    }else 
-        console.log('Pc vince il gioco');
         pcScore=0;
+        uts.innerHTML = utenteScore;
+        pcs.innerHTML = pcScore;
+    }else 
+    vincitore.innerHTML = "Pc vince il gioco";
+        pcScore=0;
+        utenteScore = 0;
+        pcs.innerHTML = pcScore;
+        uts.innerHTML = utenteScore;
 }
 
 function sassoClick(){

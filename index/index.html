@@ -16,7 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"
       rel="stylesheet"
     />
-    <title>Sasso carta forbice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Sasso Carta Forbice</title>
     
   </head>
   <body>
@@ -26,13 +29,16 @@
       <section id="punti"><span id="uts">0</span>:<span id="pcs">0</span></section>
       <p id="utente">Utente</p>
       <p id="pc">PC</p>
-      <p id="chiVince">Carta vince sul sasso , Utente vince</p>
+      <p id="tiroPc" class ="para">Tiri pc</p>
+      <p id="chiVince" class ="para">Chi vincerà?</p>
+      
       <section id="immagini">
         <img src="../img/sasso.PNG" id ="i1" alt="" onclick="sassoClick()" />
         <img src="../img/carta.PNG" id ="i2" alt="" onclick="cartaClick()" />
         <img src="../img/forbice.PNG" id ="i3" alt="" onclick="forbiceClick()" />
       </section>
-      <p id="chiVince">Il primo che arriva a tre punti vince il match</p>
+      <p class="para">Il primo che arriva a tre punti vince il gioco</h2>
+      <p id="vincitore" class="para"></p>
     </div>
   </body>
 </html>
